@@ -15,7 +15,7 @@ resp.encoding="UTF-8"  # 转UTF-8
 # print(resp.text)
 
 e = etree.HTML(resp.text) # 解析网页
-title = e.xpath('//h2/text()')[0]   # ···/text() 取文本内容
+title = e.xpath('//h2/text()')[0]   # ···/text() 取文本
 paragraphs = '\n'.join(e.xpath('//div[@id="content"]/div/text()')) # ···/text() 取文本内容
 
 # print(title)
